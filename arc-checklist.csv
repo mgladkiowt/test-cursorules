@@ -1,0 +1,145 @@
+Aspect to consider,Pillar,WA-Pillars,Topic,Importance,By role,By Lifecycle,Recommendation Maturity,Recommendations,Stakeholders,Comments,Reviewed by
+What is the data model?,,,Modifiability,0: Low,,,0: Free choice,,,FCH:OK,Pending review
+What stack to use for frontend?,Quality at Development,,Modifiability,1: Medium,TTL,Sprint 0,0: Free choice,,,FCH:OK,Pending review
+What's the expected lifespan of the system. How long will the system be used?,,,Modifiability,0: Low,,,0: Free choice,,,FCH:OK,Pending review
+GENERAL: How to increase modifiability?,Quality at Development,,Modifiability,3: Very High,Architect,Sprint 0,0: Free choice,"Consider CQRS pattern
+Consider Event-driven style
+Consider CRUD pattern
+Consider Onion Architecture
+Use Feature Toggles",,"FCH:why the general prefix on this one ? I see now, but the GENERAL question is missing for some other tags",Pending review
+How to document architecture?,Quality at Development,,Modifiability,2: High,Architect,Sprint 0,1: Provisional advice,"Use C4 model
+Use Structurizr
+Consider Ice Panel",Jérémy Subtil,FCH:OK,Pending review
+What are the retention policies? How is data archived?,,Performance Efficiency,Performance,0: Low,,,0: Free choice,,,FCH:one question only please,Pending review
+Are there different types of users,Quality at Runtime,,Security,0: Low,CP,,0: Free choice,,,FCH:OK,Pending review
+AI/ML projects: how to improve testability?,Quality at Development,Reliability,Testability,0: Low,TTL,,0: Free choice,"Ask for test data for AI projects
+Use data anonymization tool RegData",,FCH:OK,Pending review
+How is static code quality analysis organized?,Quality at Development,Operational Excellence,Modifiability,0: Low,TTL,Sprint 0,0: Free choice,,,"FCH:OK, but for projects in our infra, it should be enforced by our pipelines",Pending review
+What Metrics & Quality gates are there?,Quality at Development,Operational Excellence,Testability,0: Low,TTL,,0: Free choice,,,FCH:OK,Pending review
+How the testability  is tracked,Quality at Development,Operational Excellence,Testability,0: Low,Architect,,0: Free choice,"Use SonarQube
+Use Quality Dashboards",,FCH:OK,Pending review
+What coding guidelines are there for tests?,Quality at Development,Reliability,Testability,0: Low,TTL,,0: Free choice,,,FCH:OK,Pending review
+"How to organize GitOps? Deployments, rollbacks, configuration, what tools to use?",Quality at Development,Operational Excellence,Deployability,0: Low,TTL,,0: Free choice,"Use Feature Toggles
+Use directory/file per environment",,FCH: split questions,Pending review
+"GENERAL: How to improve testability?  ",Quality at Development,Reliability,Testability,0: Low,TTL,,0: Free choice,"Refer to Testing Audit
+Limit complexity
+Use Dependency Injection
+Consider Onion Architecture
+Integrate tests into CI/CD pipeline
+Promote modular design
+Mock or Stub 3rd party APIs
+Dedicate time for test maintenance",,"Bring in advices from Robert C. Martin's Clean Architecture; Talk to TG-Quality, e.g. Edouard Gence, Alexander Haze; Add people to stakeholders: Anh & Le in Danang, Pavel, Pierre.",Pending review
+Where to store artifacts? / Is there a project-specific need?,Quality at Development,Operational Excellence,Deployability,0: Low,TTL,,0: Free choice,,Balazs Lajer,FCH: I don't see the added value of the second question,Pending review
+How to document APIs,Quality at Development,Operational Excellence,Integrability,0: Low,TTL,,1: Provisional advice,Consider Swagger,,FCH:OK,Pending review
+Where to set up wiki?,Quality at Development,Operational Excellence,Modifiability,0: Low,TTL,Sprint 0,0: Free choice,,,FCH:OK,Pending review
+What stack to use for backend?,Quality at Development,,Modifiability,1: Medium,TTL,Sprint 0,0: Free choice,,,FCH:OK,Pending review
+How to set up the guardrails to ensure teams's autonomy while ensuring security without loosing the control?,Quality at Runtime,,Security,0: Low,,,,,,,Pending review
+What tools to use for mockups?,Quality at Runtime,,Usability,0: Low,Architect,Project Kickoff,0: Free choice,,,FCH:OK,Pending review
+How users authenticate?,Quality at Runtime,Security,Security,0: Low,Architect,,0: Free choice,,,FCH:OK,Pending review
+How to ensure accessibility?,Quality at Runtime,,Usability,0: Low,Architect,Sprint 0,0: Free choice,,,FCH:OK,Pending review
+How to ensure design will be user-centric?,Quality at Runtime,,Usability,0: Low,Architect,Project Kickoff,0: Free choice,,,FCH:OK,Pending review
+How to improve usability?,Quality at Runtime,,Usability,0: Low,Architect,Project Kickoff,0: Free choice,,,"How to improve usability?, FCH:OK",Pending review
+What Identity provider do you use?,Quality at Runtime,Security,Security,0: Low,Architect,,0: Free choice,"Consider Firebase authentication CIAM
+Consider Google Identity Platform CIAM
+Consider AWS Cognito CIAM
+Consider Azure Active Directory External Identities CIAM
+Consider Okta CIAM
+Consider Alibaba Identity as a service CIAM
+Consider Auth0 CIAM",,FCH:OK,Pending review
+What caching mechanisms to use?,Quality at Runtime,Performance Efficiency,Performance,0: Low,Architect,,0: Free choice,,,FCH:OK,Pending review
+What best practices of usability to use?,Quality at Runtime,,Usability,0: Low,Architect,Project Kickoff,0: Free choice,,,FCH:OK,Pending review
+How to ensure scalability of the system?,Quality at Runtime,Reliability,Performance,0: Low,Architect,,0: Free choice,"Design for Horizontal Scaling
+Use Elastic Infrastructure",,FCH:OK,Pending review
+What stack to use for mobile?,Quality at Development,,Modifiability,1: Medium,TTL,Sprint 0,1: Provisional advice,"Consider Flutter, PWA",Arnaud Bariatti,FCH:OK,Pending review
+What environments are set up?,Quality at Development,Operational Excellence,Deployability,1: Medium,Architect,,0: Free choice,,Balazs Lajer,FCH:OK,Pending review
+How to package the software?,Quality at Development,Operational Excellence,Deployability,0: Low,Architect,,0: Free choice,,,FCH:OK,Pending review
+How to provision infrastructure?,Quality at Development,Operational Excellence,Deployability,0: Low,Architect,,0: Free choice,,Balazs Lajer,FCH:OK,Pending review
+What orchestrator to use?,Quality at Development,,Deployability,0: Low,Architect,,0: Free choice,,Balazs Lajer,FCH:OK,Pending review
+Where to track issues?,Quality at Development,Operational Excellence,Modifiability,0: Low,TTL,Sprint 0,0: Free choice,,,FCH:OK,Pending review
+What mitigation strategies are identified?,Quality at Runtime,Reliability,Availability,0: Low,CP,,0: Free choice,"Replicate critical components
+Use Circuit breaker
+Ensure geographic redundancy",,FCH:OK,Pending review
+How is Failover handled?,Quality at Runtime,Reliability,Availability,0: Low,Architect,,0: Free choice,,,FCH:OK,Pending review
+GENERAL: How to ensure environmental sustainablity?,Quality at Runtime,Sustainability,Sustainability,0: Low,CP,,0: Free choice,,Antoine Mougeot,,Pending review
+"How is observability set up? ",Quality at Runtime,Operational Excellence,Availability,1: Medium,TTL,Sprint 0,0: Free choice,"Use Prometheus / Grafana
+Use Automated Alerts",Balazs Lajer,FCH:OK,Pending review
+What Disaster Recovery plan is in place?,Quality at Runtime,Reliability,Availability,0: Low,TTL,,0: Free choice,"Establish regular Backup routines
+Establish quick restore capabilities
+Identify failure scenarios
+Prepare recovery plan for failure scenarios",,FCH:OK,Pending review
+How is penetration testing performed?,Quality at Runtime,Security,Security,0: Low,TTL,,0: Free choice,,,FCH:OK,Pending review
+What database to use?,Quality at Runtime,,Performance,1: Medium,TTL,,0: Free choice,,,FCH:OK,Pending review
+What failures can arise during system operation?,Quality at Runtime,Reliability,Availability,0: Low,TTL,Project Kickoff,0: Free choice,"Analyse per project
+Identify failure scenarios",,FCH:OK,Pending review
+"Is it a medical application? ",Quality at Runtime,,Security,0: Low,CP,,0: Free choice,,Winston Hough,FCH:OK,Pending review
+What public cloud to use?,Quality at Development,,Deployability,0: Low,Architect,,0: Free choice,Use Azure,,"FCH:redundant with first Deployability question, no?",Pending review
+How to document ADR?,Quality at Development,Operational Excellence,Modifiability,0: Low,Architect,Sprint 0,0: Free choice,,Alex Bulla,FCH:OK,Pending review
+What version control to use?,Quality at Development,Operational Excellence,Modifiability,0: Low,TTL,Sprint 0,2: Established practice,Use Git,,FCH:OK,Pending review
+What AI Assistant to use when coding?,Quality at Development,Operational Excellence,Modifiability,0: Low,DEV,Sprint 0,0: Free choice,,,FCH:OK,Pending review
+"What architecture to use? Monolith, micro-services, monolith-first...",Quality at Development,Reliability,Modifiability,2: High,Architect,Sprint 0,0: Free choice,,,FCH:OK,Pending review
+How to set up repos? Mono-repo / how many repos?,Quality at Development,,Modifiability,1: Medium,DEV,Sprint 0,0: Free choice,Separate source code & config repos,Balazs Lajer,FCH:OK,Pending review
+" What testing processes are there?",Quality at Development,Reliability,Testability,0: Low,DEV,,0: Free choice,"Unit Testing
+Integration Testing
+System Testing",,FCH:OK,Pending review
+How is testing included in offering?,Quality at Development,Reliability,Testability,0: Low,CP,,0: Free choice,Dedicate time for test maintenance,,FCH:OK,Pending review
+What trainings and certifications are there for the team?,Quality at Development,,Testability,0: Low,CP,,0: Free choice,,,"(cypress), FCH:OK",Pending review
+What strategies are used for maintaining tests?,Quality at Development,,Testability,0: Low,DEV,,0: Free choice,Dedicate time for test maintenance,,FCH:OK,Pending review
+What automated Alerts are in place?,Quality at Runtime,,Availability,0: Low,DEV,,0: Free choice,,,FCH:OK,Pending review
+What Health Checks are in place?,Quality at Runtime,,Availability,0: Low,DEV,,0: Free choice,,,FCH:OK,Pending review
+What are the usage patterns?,,,Performance,0: Low,,,0: Free choice,,,FCH:OK,Pending review
+What naming conventions to use?,Quality at Development,,Modifiability,0: Low,TTL,Sprint 0,0: Free choice,,,FCH:OK,Pending review
+Is Security competence in the team?,Quality at Runtime,,Security,0: Low,,,0: Free choice,,,FCH:OK,Pending review
+How is stress testing performed?,Quality at Runtime,,Performance,0: Low,,,0: Free choice,,,FCH:OK,Pending review
+What is the budget for ongoing operational costs?,Quality at Runtime,,Cost efficiency,0: Low,,,0: Free choice,,,,Pending review
+Does tech stack match with available competences?,Quality at Development,,Modifiability,2: High,Architect,Sprint 0,0: Free choice,,,FCH: this is more a staffing concern to find the right skills for the project,Pending review
+What are the external systems?,Quality at Development,,Integrability,0: Low,,,0: Free choice,,,"FCH: tag should be Integrability, no?",Pending review
+Do other systems exist that will integrate?,Quality at Development,,Integrability,0: Low,,,0: Free choice,,,"FCH:OK, maybe redundent with ""What are the external systems"" ?",Pending review
+What's rollback strategy in place?,Quality at Development,,Deployability,0: Low,,,0: Free choice,,,FCH:OK,Pending review
+How is FE tested?,Quality at Development,,Testability,0: Low,TTL,,0: Free choice,,,"FCH: why this specific question for FE, or why not the equivalent for BE",Pending review
+What branching strategy to use?,Quality at Development,Operational Excellence,Modifiability,1: Medium,TTL,Sprint 0,2: Established practice,"Use GitHub Flow
+Use trunk-based ","Marc Lecoultre
+Jérémy Subtil","Confirm it aligns with the outcomes of the branching strategy by (Marc, Richard)",Pending review
+What's the guidance of code organisation?,,,Modifiability,,,,,,,"E.g. modules on top level, controllers, services, repositories, config below.",Pending review
+What design system is used?,Quality at Runtime,Reliability,Usability,2: High,TTL,Project Kickoff,1: Provisional advice,Use Material Design,,"Include stakeholders: Valentin Marteau, Edgar Zehnder",Pending review
+What are the personas?,,,Usability,1: Medium,,,0: Free choice,,,,Pending review
+What user journeys are identified?,,,Usability,1: Medium,,,0: Free choice,,,,Pending review
+What internationalization tool to use?,Quality at Runtime,,Usability,1: Medium,,,,,,FCH:OK,Pending review
+How usability tests are organised?,,,Usability,2: High,,,,,,,Pending review
+How to objectively measure usability?,Quality at Runtime,Performance Efficiency,Usability,2: High,CP,Sprint 0,0: Free choice,Measure task's clicks/time,,FCH:OK,Pending review
+Does UI follow the NN/g 10 usability heuristics?,,,Usability,3: Very High,,,,,,,Pending review
+What test coverage is enforced by Quality Gate?,Quality at Development,Reliability,Testability,3: Very High,DEV,,0: Free choice,Aim for 60% coverage,Anh Nguyen,"Sync with TG Quality, FCH:OK",Pending review
+"How are E2E tests organized? ",Quality at Development,Reliability,Testability,1: Medium,DEV,,0: Free choice,Parallel Execution,,FCH:OK,Pending review
+What unit testing tools are used?,Quality at Development,Reliability,Testability,1: Medium,TTL,,0: Free choice,,,"FCH:split in 2 questions, or keep only one",Pending review
+" What integration testing tools are used?",,,Testability,1: Medium,,,,,,,Pending review
+"What's the ratio between unit, integration, E2E, manual testing?",,,Testability,2: High,,,,,,,Pending review
+How are possible threats mitigated?,Quality at Runtime,Security,Security,2: High,Architect,,0: Free choice,,,FCH:OK,Pending review
+Is DPA signed?,Quality at Runtime,Security,Security,2: High,CP,,1: Provisional advice,,,"DPA - Data Processing Act. , FCH:OK",Pending review
+How to monitor vulnerabilities?,,,Security,2: High,,,0: Free choice,,,FCH:OK,Pending review
+How is App Security Testing (AST) organized?,Quality at Runtime,Security,Security,1: Medium,TTL,,0: Free choice,,,FCH:OK,Pending review
+Are the tools used approved by OWT Security?,Quality at Runtime,Security,Security,1: Medium,Architect,,3: Requirement,,Winston Hough,"Where is the list?, FCH:OK",Pending review
+How is sensitive data handled?,Quality at Runtime,Security,Security,1: Medium,Architect,,0: Free choice,,,"What is sensitive data? DPA - Data Processing Act. , FCH:OK",Pending review
+How is secrets management organized?,Quality at Runtime,Security,Security,3: Very High,,,,Use Keeper,,"FCH: what's the difference with question ""How to do secret management"" ?",Pending review
+GENERAL: How to ensure security? How is the team trained for security? What guidelines exist?,Quality at Runtime,Security,Security,,CP,,2: Established practice,"Refer to the standard DevSecOps implementation
+Follow the iSO27001 best practices",Balazs Lajer,Talk to TG-Security,Pending review
+What IDPs is used?,Quality at Runtime,Security,Security,1: Medium,Architect,,0: Free choice,,,"IDP: Identity provider, FCH:OK",Pending review
+What Availability Requirements (SLA) are expected?,Quality at Runtime,Performance Efficiency,Availability,2: High,CP,Project Kickoff,0: Free choice,"Analyse per project
+Specify concrete SLAs",Balazs Lajer,FCH:OK,Pending review
+What backup and restore routines established?,Quality at Runtime,,Availability,1: Medium,DEV,,0: Free choice,,,FCH:OK,Pending review
+GENERAL: How to ensure Availability?,Quality at Runtime,Reliability,Availability,,Architect,,0: Free choice,"Design for Horizontal Scaling
+Use Elastic Infrastructure
+Specify concrete SLAs",,FCH:OK,Pending review
+Are critical components redundant/replicated?,Quality at Runtime,Reliability,Availability,1: Medium,Architect,,0: Free choice,Ensure geographic redundancy,,FCH:OK,Pending review
+GENERAL: How to ensure performance?,Quality at Runtime,Performance Efficiency,Performance,,Architect,,0: Free choice,"Consider separating read & write store
+Design for Horizontal Scaling
+Use Elastic Infrastructure
+Consider Gatling",,FCH:OK,Pending review
+How is load testing performed?,Quality at Runtime,Performance Efficiency,Performance,2: High,TTL,,0: Free choice,,,FCH:OK,Pending review
+How much data will be stored in lifecycle of system?,,Performance Efficiency,Performance,2: High,,,0: Free choice,,,FCH:OK,Pending review
+What is the expected size of data?,Quality at Runtime,Performance Efficiency,Performance,1: Medium,Architect,,0: Free choice,,,FCH:OK,Pending review
+What is the expected user base?,Quality at Runtime,,Performance,2: High,CP,,0: Free choice,,,FCH:OK,Pending review
+What are key latency requirements?,Quality at Runtime,Performance Efficiency,Performance,3: Very High,CP,,0: Free choice,,,FCH:OK,Pending review
+What profiling & monitoring tools to use?,Quality at Runtime,,Performance,1: Medium,DEV,,0: Free choice,,,FCH:OK,Pending review
+Where to deploy? Which public cloud / on premise?,Quality at Development,,Deployability,1: Medium,Architect,,0: Free choice,,,FCH: split in 2 questions,Pending review
+How many pipelines to set up?,Quality at Development,Operational Excellence,Deployability,1: Medium,TTL,,1: Provisional advice,,Balazs Lajer,"FCH: instead of how many, I would rather ask Which pipelines to setup so that the answer is describing the what  instead of the quantity",Pending review
+What are the DevOps drivers?,,,,3: Very High,,,,,,,Pending review
+What artifacts and how are they build?,,,,2: High,,,,,,,Pending review
